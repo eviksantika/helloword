@@ -6,26 +6,15 @@ Hello World for Golang
 
 ## Simple Command
 
-Run golang program
+
+Run build docker
 
 ```bash
-go run main.go
+docker build . -f Dockerfile -t helloword:latest
 ```
 
-Testing
+Run Docker
 
 ```bash
-go test
-```
-
-Build binary
-
-```bash
-go build
-```
-
-Install binary
-
-```bash
-go install
+docker run -d -p 9099:9099 --name helloword helloword:latest
 ```
